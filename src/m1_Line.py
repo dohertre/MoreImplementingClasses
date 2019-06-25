@@ -374,6 +374,9 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
+        line1 = Line.__repr__(self)
+        return line1[::-1]
+
     def slope(self):
         """
         What comes in:
@@ -401,7 +404,7 @@ class Line(object):
           :rtype: float
         """
         # --------------------------------------------------------------
-        # TODO: 6.
+        # DONE: 6.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -409,6 +412,22 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        x1 = self.start.x
+        y1 = self.start.y
+
+        x2 = self.end.x
+        y2 = self.end.y
+
+        y_slope = y2 - y1
+        x_slope = x2 - x1
+
+        if y_slope == 0:
+            slope = -0.0
+        elif x_slope == 0:
+            slope = math.inf
+        else:
+            slope = y_slope / x_slope
+        return slope
 
     def length(self):
         """
