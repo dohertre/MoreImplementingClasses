@@ -18,7 +18,7 @@ def main():
 
     run_test_simple_t()
     run_test_set_colors()
-    # run_test_move_by()
+    run_test_move_by()
     # run_test_clone()
 
 
@@ -262,6 +262,9 @@ class CapitalT(object):
         #     move_by.pdf. Note: the pdf shows the different locations
         #     that the T moves through, but there is only 1 T at any moment.
         # --------------------------------------------------------------
+        self.center.x = self.center.x + dx
+        self.center.y = self.center.y + dy
+        self.center = rg.Point(self.center.x, self.center.y)
 
     def clone(self):
         """
