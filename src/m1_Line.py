@@ -378,8 +378,9 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
 
-        line1 = Line.__repr__(self)
-        return line1[::-1]
+        self.reverser = self.start
+        self.start = self.end
+        self.end = self.reverser
 
     def slope(self):
         """
