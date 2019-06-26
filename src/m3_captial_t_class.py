@@ -143,6 +143,8 @@ class CapitalT(object):
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
         self.center = intersection_center
+        self.center.x = intersection_center.x
+        self.center.y = intersection_center.y
         self.width = width
         self.height = height
         self.thickness = letter_thickness
@@ -265,7 +267,7 @@ class CapitalT(object):
         self.center.x = self.center.x + dx
         self.center.y = self.center.y + dy
         self.center = rg.Point(self.center.x, self.center.y)
-        
+
     def clone(self):
         """
         What comes in:
@@ -293,9 +295,6 @@ class CapitalT(object):
         #     clone.pdf.
         # --------------------------------------------------------------
         return self.v_rect, self.h_rect
-
-
-
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
