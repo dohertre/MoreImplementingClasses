@@ -548,6 +548,29 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        x1 = self.start.x
+        y1 = self.start.y
+
+        x2 = self.end.x
+        y2 = self.end.y
+
+        x1_other = other_line.start.x
+        y1_other = other_line.start.y
+
+        x2_other = other_line.end.x
+        y2_other = other_line.end.y
+
+        x1_pos = x1 + x1_other
+        y1_pos = y1 + y1_other
+
+        x2_pos = x2 + x2_other
+        y2_pos = y2 + y2_other
+
+        point2 = Point(x1_pos, y1_pos)
+        point3 = Point(x2_pos, y2_pos)
+
+        line2 = Line(point2, point3)
+        return line2
 
     def line_minus(self, other_line):
         """
