@@ -137,7 +137,7 @@ class CapitalT(object):
           :type letter_thickness:   int
         """
         # --------------------------------------------------------------
-        # TODO: 3.
+        # DONE: 3.
         #   READ the above specification, including the Example.
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
@@ -166,7 +166,7 @@ class CapitalT(object):
 
         # lower right corner vertical
         corner4_x = self.center.x + (letter_thickness / 2)
-        corner4_y = self.center.y - (height - (letter_thickness / 2))
+        corner4_y = self.center.y + (height - (letter_thickness / 2))
 
         Point3 = rg.Point(corner3_x, corner3_y)
         Point4 = rg.Point(corner4_x, corner4_y)
@@ -192,7 +192,7 @@ class CapitalT(object):
           :type window: rg.RoseWindow
         """
         # --------------------------------------------------------------
-        # TODO: 4.
+        # DONE: 4.
         #   READ the above specification, including the Example.
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
