@@ -146,7 +146,32 @@ class CapitalT(object):
         self.width = width
         self.height = height
         self.thickness = letter_thickness
-        t1.h_rect = rg.Rectangle()
+
+        # upper left corner horizontal
+        corner1_x = self.center.x - (width/2)
+        corner1_y = self.center.y + (letter_thickness/2)
+
+        # lower right corner horizontal
+        corner2_x = self.center.x + (width/2)
+        corner2_y = self.center.y - (letter_thickness/2)
+
+        Point1 = rg.Point(corner1_x, corner1_y)
+        Point2 = rg.Point(corner2_x, corner2_y)
+
+        self.h_rect = rg.Rectangle(Point1, Point2)
+
+        # upper left corner vertical
+        corner3_x = self.center.x - (letter_thickness / 2)
+        corner3_y = self.center.y + (letter_thickness / 2)
+
+        # lower right corner vertical
+        corner4_x = self.center.x + (letter_thickness / 2)
+        corner4_y = self.center.y - (height - (letter_thickness / 2))
+
+        Point3 = rg.Point(corner3_x, corner3_y)
+        Point4 = rg.Point(corner4_x, corner4_y)
+
+        self.v_rect = rg.Rectangle(Point3, Point4)
 
     def attach_to(self, window):
         """
@@ -172,6 +197,8 @@ class CapitalT(object):
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
         # --------------------------------------------------------------
+        self.v_rect.attach_to(window)
+        self.h_rect.attach_to(window)
 
     def set_colors(self, fill_color, outline_color):
         """
@@ -200,6 +227,8 @@ class CapitalT(object):
         #     run_test method in main. Compare the graphics window to
         #     set_colors.pdf.
         # --------------------------------------------------------------
+        self.fill_color = fill_color
+        self.outline_color = outline_color
 
     def move_by(self, dx, dy):
         """
