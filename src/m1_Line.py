@@ -774,8 +774,8 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
-        self = Line(self.start_og, self.end_og)
-        return self
+        line5 = Line(self.start_og, self.end_og)
+        return line5
 
 
 ########################################################################
