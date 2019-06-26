@@ -19,7 +19,7 @@ def main():
     run_test_simple_t()
     run_test_set_colors()
     run_test_move_by()
-    # run_test_clone()
+    run_test_clone()
 
 
 def run_test_simple_t():
@@ -292,6 +292,8 @@ class CapitalT(object):
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
+        h2 = self.h_rect
+        v2 = self.v_rect
 
 
 # ----------------------------------------------------------------------
