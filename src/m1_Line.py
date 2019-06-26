@@ -461,6 +461,17 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        x1 = self.start.x
+        y1 = self.start.y
+
+        x2 = self.end.x
+        y2 = self.end.y
+
+        len_x = abs(x2 - x1)
+        len_y = abs(y2 - y1)
+
+        return ((len_x ** 2) + (len_y ** 2)) ** 0.5
+
 
     def get_number_of_clones(self):
         """
