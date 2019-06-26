@@ -692,7 +692,7 @@ class Line(object):
           :rtype: bool
         """
         # --------------------------------------------------------------
-        # TODO: 12.
+        # DONE: 12.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -726,6 +726,13 @@ class Line(object):
         # and (usually) adequate to distinguish numbers that really
         # are different from each other.
         ################################################################
+        slope1 = Line.slope(self)
+        slope2 = Line.slope(line2)
+
+        if round(slope1, 12) == round(slope2, 12):
+            return True
+        else:
+            return False
 
     def reset(self):
         """
