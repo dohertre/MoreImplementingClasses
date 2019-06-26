@@ -379,7 +379,9 @@ class Line(object):
         # --------------------------------------------------------------
 
         self.reverser = self.start
+
         self.start = self.end
+
         self.end = self.reverser
 
     def slope(self):
