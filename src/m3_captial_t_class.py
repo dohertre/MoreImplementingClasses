@@ -265,7 +265,7 @@ class CapitalT(object):
         self.center.x = self.center.x + dx
         self.center.y = self.center.y + dy
         self.center = rg.Point(self.center.x, self.center.y)
-
+        
     def clone(self):
         """
         What comes in:
