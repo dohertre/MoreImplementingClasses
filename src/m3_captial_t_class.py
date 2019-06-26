@@ -292,8 +292,9 @@ class CapitalT(object):
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
-        h2 = self.h_rect
-        v2 = self.v_rect
+        return self.v_rect, self.h_rect
+
+
 
 
 # ----------------------------------------------------------------------
